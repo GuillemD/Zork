@@ -6,7 +6,7 @@
 
 int main(){
 
-	player::p; 
+	player p; 
 	printf("Where am I? Why am I in an operating room? What is this terrible headache?\n I'm starting to remember everything... I wanted to end with my nightmares, but this seems just like one...\n I better start looking for the lake. My nightmares always stop when I find her in the lake. ");
 
 	void createWorld();

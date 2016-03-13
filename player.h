@@ -17,6 +17,7 @@ private:
 
 
 public:
+	
 	player();
 	~player();
 	void move(int dir);

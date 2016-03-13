@@ -37,7 +37,7 @@ void move(int dir, room** rooms)
 }
 void look()
 {
-	rooms[x][y].printDescription();//ERROR! rooms, x, y undefined
+	rooms[x][y].printDescription();
 }
 void help()
 {

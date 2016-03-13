@@ -1,4 +1,5 @@
 #include "room.h"
+#include "player.h"
 
 void setDoorState(int state)
 {
