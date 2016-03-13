@@ -21,21 +21,19 @@ private:
 	char* description;
 	int up, down, left, right;
 
-
-
-	// continuar tots els comandos
-
 public:
 	void room::setIsRoom(bool _isroom);
 	void room::setWalls(int _up, int _down, int _left, int _right);
+	void room::setDescription(char* m_desc);
+	void room::printDescription();
 
 
 	room();
 	~room();
-	//this shows the description ef the current room.
+	//this shows the description of the current room.
 	void showDesc()
 	{
-		printf(description.c_str());
+		printf(description.c_str()); 
 	}
 	//checking if the position we are going is a room or not.
 	bool isRoom()
@@ -51,10 +49,10 @@ public:
 			n = up; break;
 		case DIR_DOWN:
 			n = down; break;
-		case DIR_UP:
-			n = up; break;
-		case DIR_UP:
-			n = up; break;
+		case DIR_LEFT:
+			n = left; break;
+		case DIR_RIGHT:
+			n = right; break;
 
 		}
 		return n;

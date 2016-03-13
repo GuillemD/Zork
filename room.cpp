@@ -1,11 +1,15 @@
 #include "room.h"
 
-
+void setDoorState(int state)
+{
+	room[x][y].right = OPEN_DOOR; 
+	room[x][y].left = OPEN_DOOR;
+}
 void room::setIsRoom(bool _isroom)
 {
 	isroom = _isroom;
 }
-void room::setWalls(int _up, int _down, int _left, int _right) //definint el tipus de parets 
+void room::setWalls(int _up, int _down, int _left, int _right) //defining wall types
 {
 	up = _up;
 	down = _down;
@@ -18,13 +22,13 @@ room::room()
 }
 
 
-room::setDescription(char* m_desc)
+void room::setDescription(char* m_desc) 
 {
 	m_desc = new char[200];
 	strcpy(description, m_desc);
 }
 
-room::printDescription()
+void room::printDescription()
 {
 	printf("%s", description);
 }

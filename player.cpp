@@ -1,5 +1,7 @@
 #include "player.h"
 #include <stdio.h>
+#include "room.h"
+#include "world.h"
 
 
 player::player()
@@ -14,7 +16,7 @@ player::player()
 }
 void move(int dir, room** rooms)
 {
-	if (x <= 0 && dir == DIR_LEFT)
+	if (x <= 0 && dir == DIR_LEFT) 
 		printf("You cannot move in this direction!");
 	else if (y <= 0 && dir == DIR_UP)
 		printf("You cannot move in this direction!");
@@ -35,11 +37,14 @@ void move(int dir, room** rooms)
 }
 void look()
 {
-	rooms[x][y].printDescription();
+	rooms[x][y].printDescription();//ERROR! rooms, x, y undefined
+}
+void help()
+{
+	printf("Here is the command list:\n quit\n help\n look\n go\n open\close");
 }
 player::~player()
 {
 	//freeing memory allocated for the inventory.
 	delete[] inventory;
 }
-

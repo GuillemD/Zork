@@ -1,51 +1,15 @@
-include <stdio.h>
+#include <stdio.h>
 #include "player.h"
 #include "room.h"
-// moure totes les funcions a un altre header
-const char* QUIT = "QUIT";
-const char* NORTH = "NORTH";
-const char* GO_NORTH = "GO NORTH";
-const char* UP = "UP";
-const char* GO_UP = "GO UP";
-
-int checkMoves(char* commando)
-{
-	//canviar per totes les direccions amb mes d'un commando
-	if ((strcmp(commando, NORTH) == 0) || (strcmp(commando, GO_NORTH) == 0) || (strcmp(commando, UP) == 0) || (strcmp(commando, GO_UP) == 0))
-	{
-		return DIR_UP;
-	}
-	else if ((strcmp(commando, NORTH) == 0) || (strcmp(commando, GO_NORTH) == 0) || (strcmp(commando, UP) == 0) || (strcmp(commando, GO_UP) == 0))
-	{
-
-	}
-	else if ((strcmp(commando, NORTH) == 0) || (strcmp(commando, GO_NORTH) == 0) || (strcmp(commando, UP) == 0) || (strcmp(commando, GO_UP) == 0))
-	{
-
-	}
-	else if ((strcmp(commando, NORTH) == 0) || (strcmp(commando, GO_NORTH) == 0) || (strcmp(commando, UP) == 0) || (strcmp(commando, GO_UP) == 0))
-	{
-
-	}
-	// si no es cap de les direccions, sortim per veure si es un altre tipus de commando
-	else
-		return -1;
-
-
-}
-
-void str_toupper(char* str) //convertint els commandos a majuscula totes les lletres. QuIt seria valid
-{
-	for (int i = 0; i < strlen(str); i++)
-		str[i] = toupper(str[i]);
-}
+#include "otherfunctions.h"
+#include "world.h"
 
 int main(){
 
-	player::p;
-	printf("description");
+	player::p; 
+	printf("Where am I? Why am I in an operating room? What is this terrible headache?\n I'm starting to remember everything... I wanted to end with my nightmares, but this seems just like one...\n I better start looking for the lake. My nightmares always stop when I find her in the lake. ");
 
-	//world.createWorld();
+	void createWorld();
 
 
 	while (1)
@@ -59,17 +23,22 @@ int main(){
 		switch (move)
 		{
 		case 0:
-			p.move(DIR_UP)
+			p.move(DIR_UP); break; 
 		case 1:
+			p.move(DIR_LEFT); break;
 		case 2:
+			p.move(DIR_RIGHT); break;
 		case 3:
+			p.move(DIR_DOWN); break;
 		}
 		if (move == -1)
 		{
 			if (strcmp(commando, QUIT) == 0)
 				return 0;
 			else if (strcmp(commando, LOOK) == 0)
-				p.look();
+				void look();
+			else if (strcmp(commando, HELP) == 0)
+				void help();
 			else
 				printf("Unknown commando %s", commando);
 		}
