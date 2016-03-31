@@ -16,7 +16,7 @@ player::player()
 }
 void move(int dir, room** rooms)
 {
-	if (x <= 0 && dir == DIR_LEFT) 
+	if (x <= 0 && dir == DIR_LEFT)
 		printf("You cannot move in this direction!");
 	else if (y <= 0 && dir == DIR_UP)
 		printf("You cannot move in this direction!");

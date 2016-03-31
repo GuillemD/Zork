@@ -1,5 +1,6 @@
 #ifndef _OTHERFUNCTIONS_H_
 #define _OTHERFUNCTIONS_H_
+#include "mystring.h"
 
 //SPECIAL COMMANDS
 const char* QUIT = "QUIT";
@@ -26,9 +27,10 @@ const char* GO_EAST = "GO EAST";
 const char* RIGHT = "RIGHT";
 const char* GO_RIGHT = "GO RIGHT";
 
-int checkMoves(char* command)
+int checkMoves(const char* command)
 {
 	//the directions have more than one command, so we make all viable
+
 	if ((strcmp(command, NORTH) == 0) || (strcmp(command, GO_NORTH) == 0) || (strcmp(command, UP) == 0) || (strcmp(command, GO_UP) == 0))
 	{
 		return DIR_UP;

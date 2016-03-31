@@ -3,8 +3,7 @@
 
 void setDoorState(int state)
 {
-	room[x][y].right = OPEN_DOOR; 
-	room[x][y].left = OPEN_DOOR;
+
 }
 void room::setIsRoom(bool _isroom)
 {
@@ -23,7 +22,7 @@ room::room()
 }
 
 
-void room::setDescription(char* m_desc) 
+void room::setDescription(char* m_desc)
 {
 	m_desc = new char[200];
 	strcpy(description, m_desc);

@@ -1,6 +1,7 @@
 #include "world.h"
 #include "room.h"
 #include "player.h"
+#include "mystring.h"
 
 void createWorld()
 {
@@ -53,6 +54,7 @@ void createWorld()
 	rooms[2][3].setWalls(WALL, WALL, FREE, WALL);
 	rooms[2][3].setDescription("You are in the backyard. The Living Room is at your left.");
 	rooms[3][3].setIsRoom(false);
+
 
 
 	for (int i = 0; i< 4; i++)

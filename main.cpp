@@ -3,10 +3,11 @@
 #include "room.h"
 #include "otherfunctions.h"
 #include "world.h"
+#include "MemLeaks.h"
 
 int main(){
-
-	player p; 
+	ReportMemoryLeaks();
+	player p;
 	printf("Where am I? Why am I in an operating room? What is this terrible headache?\n I'm starting to remember everything... I wanted to end with my nightmares, but this seems just like one...\n I better start looking for the lake. My nightmares always stop when I find her in the lake. ");
 
 	void createWorld();
@@ -23,7 +24,7 @@ int main(){
 		switch (move)
 		{
 		case 0:
-			p.move(DIR_UP); break; 
+			p.move(DIR_UP); break;
 		case 1:
 			p.move(DIR_LEFT); break;
 		case 2:

@@ -1,4 +1,6 @@
-#pragma once
+#include "entity.h"
+#ifndef ROOM_H_
+#define ROOM_H_
 #include <string>
 #include <stdio.h>
 /**
@@ -9,12 +11,10 @@ For up, down, left, right we define the following values:
 3=open door;
 4=portal;
 */
-const int WALL = 0;
-const int FREE = 1;
-const int CLOSED_DOOR = 2;
-const int OPEN_DOOR = 3;
-const int PORTAL = 4;
-class room
+
+enum exittype{ WALL, FREE, CLOSED_DOOR, OPEN_DOOR, PORTAL };
+
+class room : public entity
 {
 private:
 	bool isroom;
@@ -25,7 +25,7 @@ public:
 	void room::setIsRoom(bool _isroom);
 	void room::setWalls(int _up, int _down, int _left, int _right);
 	void room::setDescription(char* m_desc);
-	void room::printDescription();
+	void const room::printDescription();
 
 
 	room();
@@ -33,7 +33,7 @@ public:
 	//this shows the description of the current room.
 	void showDesc()
 	{
-		printf(description.c_str()); 
+		printf(description.c_str());
 	}
 	//checking if the position we are going is a room or not.
 	bool isRoom()
@@ -58,4 +58,4 @@ public:
 		return n;
 	}
 };
-
+#endif
