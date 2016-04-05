@@ -17,24 +17,32 @@ enum exittype{ WALL, FREE, CLOSED_DOOR, OPEN_DOOR, PORTAL };
 class room : public entity
 {
 private:
+	mystring roomname;
 	bool isroom;
-	char* description;
+	mystring roomdescription;
 	int up, down, left, right;
 
 public:
-	void room::setIsRoom(bool _isroom);
-	void room::setWalls(int _up, int _down, int _left, int _right);
-	void room::setDescription(char* m_desc);
-	void const room::printDescription();
-
-
-	room();
-	~room();
-	//this shows the description of the current room.
-	void showDesc()
+	void room::setIsRoom(bool _isroom)
 	{
-		printf(description.c_str());
+		isroom = _isroom;
 	}
+	void room::setWalls(int _up, int _down, int _left, int _right)
+	{
+		up = _up;
+		down = _down;
+		left = _left;
+		right = _right;
+	}
+	
+
+
+	room()
+	{
+		isroom = false;
+	}
+	~room();
+
 	//checking if the position we are going is a room or not.
 	bool isRoom()
 	{

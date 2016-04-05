@@ -39,17 +39,11 @@
     <ClInclude Include="MemLeaks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="exits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="world.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="room.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
